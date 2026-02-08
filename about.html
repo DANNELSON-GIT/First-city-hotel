@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | First-City Hotel</title>
+
+  <!-- media query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Boostrap csss-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/css/fontawesome.min.css">
+
+    <!-- font awesome-->
+    <link href="font/css/fontawesome.css" rel="stylesheet">
+    <link href="font/css/brands.css" rel="stylesheet">
+    <link href="font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+   <!-- jQuery library -->
+   <script src="js/jquery.min.js"></script>
+   <!-- Popper JS -->
+   <script src="js/popper.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+   <script src="script.js"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .about-hero {
+      height: 30vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("images/luxury.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .about-hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    /* Section spacing */
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: chocolate;
+      margin-bottom: 20px;
+    }
+
+    /* Cards */
+    .info-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+
+    .info-box h4 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* Values */
+    .value {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 50px;
+    }
+    .nav-link{
+        
+        font-size: 15px;
+        color: black;
+        padding: 8px;
+    }
+    a:hover{
+        color: chocolate;
+        text-decoration: none;
+    }
+
+    @media (max-width: 991px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+    <!-- NAV -->
+   <nav class=" navbar navbar-expand-lg">
+        <span class="navbar-brand">
+            <h2>First-City hotels</h2>
+        </span>
+        <div class="navbar nav">
+        <a href="index.html" class="nav-link"><b>Home</b></a>
+        <a href="about.html" class="nav-link"><b>About</b></a>
+        <a href="contact.html" class="nav-link"><b>Contact</b></a>
+        <a href="rooms.html" class="nav-link"><b>Rooms</b></a>
+        <a href="menu.html" class="nav-link"><b>Menu</b></a>
+        
+        </div>
+    </nav>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    
+    <div>
+      <h1>About First-City Hotel</h1>
+      <p>Where Comfort Meets Luxury</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col text-center">
+          <h2 class="section-title">Who We Are</h2>
+          <p>
+            First-City Hotel is a luxury hospitality destination designed to offer
+            comfort, elegance, and unforgettable experiences. We blend modern
+            design with warm service to create a home away from home for every guest.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="info-box">
+            <h4>Our Mission</h4>
+            <p>
+              To deliver exceptional hospitality by providing world-class service,
+              premium comfort, and memorable stays for our guests.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-box">
+            <h4>Our Vision</h4>
+            <p>
+              To become a leading hotel brand known for luxury, trust,
+              and outstanding guest satisfaction.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-box">
+            <h4>Our Values</h4>
+            <p class="value">✓ Excellence in Service</p>
+            <p class="value">✓ Guest Comfort & Safety</p>
+            <p class="value">✓ Integrity & Professionalism</p>
+            <p class="value">✓ Attention to Detail</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="images/Executive_e5qlcu.jpg" class="img-fluid rounded-4" alt="Hotel Experience">
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-title">Unmatched Experience</h2>
+          <p>
+            From elegant rooms and fine dining to premium amenities,
+            First-City Hotel is committed to making every stay exceptional.
+            Whether you're visiting for business or leisure, we ensure
+            comfort, convenience, and class.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 First-City Hotel — Home of Luxury
+  </div>
+
+</body>
+</html>

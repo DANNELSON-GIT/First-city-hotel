@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu | First-City Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+    }
+
+    /* HERO */
+    .menu-hero {
+      height: 50vh;
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+        url("images/luxury.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .menu-hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* BUTTONS */
+    .menu-buttons {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .menu-btn {
+      padding: 12px 30px;
+      margin: 0 10px;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      background: chocolate;
+      color: black;
+      cursor: pointer;
+    }
+
+    .menu-btn.active {
+      background: black;
+      color: white;
+    }
+
+    /* MENU GRID */
+    .menu-section {
+      display: none;
+    }
+
+    .menu-section.active {
+      display: block;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+      margin-bottom: 30px;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .menu-card-body h6 {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      color: chocolate;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="menu-hero">
+  <div>
+    <h1>Our Menu</h1>
+    <p>Food & Drinks Made to Delight</p>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<div class="menu-buttons">
+  <button class="menu-btn active" onclick="showMenu('food')">Food</button>
+  <button class="menu-btn" onclick="showMenu('drinks')">Drinks</button>
+</div>
+
+<div class="container">
+
+  <!-- FOOD MENU -->
+  <div id="food" class="menu-section active">
+    <div class="row">
+
+      <!-- FOOD CARD (duplicate pattern) -->
+      <!-- 20 FOOD ITEMS -->
+      <!-- You can replace images anytime -->
+
+      <!-- START FOOD ITEMS -->
+      <!-- Repeatable card -->
+      <script>
+        const foodItems = [
+          ["Jollof Rice & Chicken", "₦5,500", "images/food1.jpg"],
+          ["Fried Rice & Turkey", "₦6,000", "images/food2.jpg"],
+          ["Seafood Pasta", "₦7,500", "images/food3.jpg"],
+          ["Grilled Steak", "₦12,000", "images/food4.jpg"],
+          ["Pepper Soup", "₦4,500", "images/food5.jpg"],
+          ["Spaghetti Bolognese", "₦6,500", "images/food6.jpg"],
+          ["Chicken Shawarma", "₦3,500", "images/food7.jpg"],
+          ["Beef Burger", "₦4,000", "images/food8.jpg"],
+          ["Grilled Fish", "₦9,000", "images/food9.jpg"],
+          ["Vegetable Salad", "₦3,000", "images/food10.jpg"],
+          ["Pounded Yam & Egusi", "₦6,500", "images/food11.jpg"],
+          ["Ofada Rice & Sauce", "₦6,000", "images/food12.jpg"],
+          ["Chicken Alfredo", "₦7,000", "images/food13.jpg"],
+          ["BBQ Ribs", "₦10,000", "images/food14.jpg"],
+          ["Pizza", "₦8,000", "images/food15.jpg"],
+          ["French Fries", "₦2,500", "images/food16.jpg"],
+          ["Club Sandwich", "₦3,800", "images/food17.jpg"],
+          ["Fried Plantain", "₦2,000", "images/food18.jpg"],
+          ["Seafood Rice", "₦8,500", "images/food19.jpg"],
+          ["Chef’s Special", "₦15,000", "images/food20.jpg"]
+        ];
+
+        document.write(foodItems.map(item => `
+          <div class="col-md-3">
+            <div class="menu-card">
+              <img src="${item[2]}" alt="">
+              <div class="menu-card-body">
+                <h6>${item[0]}</h6>
+                <div class="price">${item[1]}</div>
+              </div>
+            </div>
+          </div>
+        `).join(""));
+      </script>
+
+    </div>
+  </div>
+
+  <!-- DRINKS MENU -->
+  <div id="drinks" class="menu-section">
+    <div class="row">
+
+      <script>
+        const drinksItems = [
+          ["Red Wine", "₦6,000", "images/drink1.jpg"],
+          ["White Wine", "₦6,000", "images/drink2.jpg"],
+          ["Champagne", "₦15,000", "images/drink3.jpg"],
+          ["Cocktail", "₦5,000", "images/drink4.jpg"],
+          ["Mocktail", "₦4,000", "images/drink5.jpg"],
+          ["Fresh Juice", "₦2,500", "images/drink6.jpg"],
+          ["Soft Drink", "₦1,500", "images/drink7.jpg"],
+          ["Whiskey", "₦8,000", "images/drink8.jpg"],
+          ["Vodka", "₦7,000", "images/drink9.jpg"],
+          ["Beer", "₦2,000", "images/drink10.jpg"],
+          ["Smoothie", "₦3,500", "images/drink11.jpg"],
+          ["Espresso", "₦2,000", "images/drink12.jpg"],
+          ["Cappuccino", "₦2,500", "images/drink13.jpg"],
+          ["Latte", "₦2,500", "images/drink14.jpg"],
+          ["Milkshake", "₦3,000", "images/drink15.jpg"],
+          ["Energy Drink", "₦2,500", "images/drink16.jpg"],
+          ["Mineral Water", "₦1,000", "images/drink17.jpg"],
+          ["Iced Tea", "₦2,000", "images/drink18.jpg"],
+          ["Rum", "₦6,500", "images/drink19.jpg"],
+          ["Gin", "₦6,000", "images/drink20.jpg"]
+        ];
+
+        document.write(drinksItems.map(item => `
+          <div class="col-md-3">
+            <div class="menu-card">
+              <img src="${item[2]}" alt="">
+              <div class="menu-card-body">
+                <h6>${item[0]}</h6>
+                <div class="price">${item[1]}</div>
+              </div>
+            </div>
+          </div>
+        `).join(""));
+      </script>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 First-City Hotel — Home of Luxury
+</div>
+
+<script>
+  function showMenu(type) {
+    document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.menu-btn').forEach(b => b.classList.remove('active'));
+
+    document.getElementById(type).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

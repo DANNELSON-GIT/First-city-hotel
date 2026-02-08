@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- media query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Boostrap csss-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/css/fontawesome.min.css">
+
+    <!-- font awesome-->
+    <link href="font/css/fontawesome.css" rel="stylesheet">
+    <link href="font/css/brands.css" rel="stylesheet">
+    <link href="font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+   <!-- jQuery library -->
+   <script src="js/jquery.min.js"></script>
+   <!-- Popper JS -->
+   <script src="js/popper.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+   <script src="script.js"></script>
+
+</head>
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .nav-link{
+        
+        font-size: 15px;
+        color: black;
+        padding: 8px;
+    }
+    
+    a:hover{
+        color: chocolate;
+        text-decoration: none;
+    }
+
+    @media (max-width: 991px) {
+  .navbar {
+    flex-wrap: wrap;
+    
+  }
+
+  .navbar-nav {
+    
+    justify-content: flex-end;
+  }
+}
+
+
+.com{
+
+    font-size:40px;
+    color:black;
+    font-weight:10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+    width:100%;
+    height:auto;
+    background-color: transparent;
+    text-align:center;
+    justify-content:center;
+}
+.boxa{
+    width: 80%;
+    height:400px;
+    
+}
+.boxb{
+    width: 80%;
+    height:400px;
+    
+}
+.boxc{
+    width: 80%;
+    height:400px;
+   
+}
+.boxa1{
+    width:100%;
+    height:300px;
+}
+.boxa2{
+    width:100%;
+    height:30px;
+}
+.boxa3{
+    width:100%;
+    height:40px;
+    color:white;
+    font-size:10px;
+    justify-content:center;
+    background-color:black;
+}
+.add{
+    margin-top: 5px;
+}
+.footer{
+    width:100%;
+    height:100px;
+    color:white;
+    background-color:black;
+    text-align:center;
+    padding-top:30px;
+}
+.add{
+    width: 100%;
+    height:30px;
+    font-size: large;
+    font-weight: 500px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Base hidden state */
+.scroll-box {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+/* Start positions */
+.from-left {
+  transform: translateX(-100px);
+}
+
+.from-right {
+  transform: translateX(100px);
+}
+
+/* When visible */
+.scroll-box.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Overlay content */
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+</style>
+<body>
+    <!-- NAV -->
+   <nav class=" nar navbar navbar-expand-lg">
+        <span class="navbar-brand">
+            <h2>First-City hotels</h2>
+        </span>
+        <div class="navbar nav">
+        <a href="index.html" class="nav-link"><b>Home</b></a>
+        <a href="about.html" class="nav-link"><b>About</b></a>
+        <a href="contact.html" class="nav-link"><b>Contact</b></a>
+        <a href="room.html" class="nav-link"><b>Rooms</b></a>
+        <a href="menu.html" class="nav-link"><b>Menu</b></a>
+        
+        </div>
+    </nav>
+
+
+
+    <div class="com text-center mt-3 mb-3">Rooms & Suite</div>
+
+        <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-left">
+                        <div class="boxa ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/Siute_njjb9a.jpg" width="95%" height="300px" alt="">
+                                </div>
+                            </a>
+                                 <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                                 <div class="boxa2 mt-1"><b>Standard Room</b></div>
+                           <a href="payment.html"> <div class="boxa3 pt-2">BOOK FOR <br>#30,000</div></a>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-md-6 col-lg-3 scroll-box from-left box mb-5">
+                        <div class="boxb ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/bg2-92f20318.jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Executive Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#40,000</div></a>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Presidential Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#50,000</div></a>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Presidential Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#50,000</div></a>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+
+
+        <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-left">
+                        <div class="boxa ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/room (4).jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                                <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                                 <div class="boxa2 mt-1"><b>Classic Room</b></div>
+                           <a href="payment.html"> <div class="boxa3 pt-2">BOOK FOR <br>#45,000</div></a>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-md-6 col-lg-3 scroll-box from-right box mb-5">
+                        <div class="boxb ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/Executive_e5qlcu.jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Deluxe Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#55,000</div></a>
+                        </div>
+                    </div>
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/luxury.jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>kingly Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#60,000</div></a>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Presidential Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2"> BOOK FOR <br> #50,000</div></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="footer">
+            Copyright @ 2026 First-City Hotel, Home Of Luxury
+        </div>
+
+        <script>
+            const boxes = document.querySelectorAll('.scroll-box');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  boxes.forEach(box => observer.observe(box));
+
+
+        </script>
+</body>
+</html>

@@ -31,7 +31,10 @@
     body{
         font-family: 'Segoe UI';
     }
-
+.add{
+    margin-top: 5px;
+   
+}
     .nav1{
     width: 100%;
     height: 40px;
@@ -69,9 +72,9 @@ a:hover{
     
     .abs1{ 
     width: 100%;
-    height: 615px;
+    height: 720px;
     position: relative;
-    background-image: url("images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png");
+    background-image: url("");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,7 +86,7 @@ a:hover{
     position: absolute;
     align-items: center;
     justify-content: center;
-    padding-top: 10%;
+    padding-top: 17%;
     
 }
 
@@ -110,7 +113,7 @@ a:hover{
     color: black;
 }
 .com{
-    font-family:;
+
     font-size:40px;
     color:black;
     font-weight:10px;
@@ -120,7 +123,7 @@ a:hover{
 .box {
     width:100%;
     height:auto;
-    background-color: none;
+    background-color: transparent;
     text-align:center;
     justify-content:center;
 }
@@ -145,13 +148,13 @@ a:hover{
 }
 .boxa2{
     width:100%;
-    height:50px;
+    height:30px;
 }
 .boxa3{
     width:100%;
     height:40px;
     color:white;
-    font-size:20px;
+    font-size:10px;
     justify-content:center;
     background-color:black;
 }
@@ -232,6 +235,14 @@ a:hover{
 .one{
     width:100%;
     height:auto;
+    
+
+}
+.one1{
+    width:100%;
+    height:auto;
+    background-color: black;
+    
 
 }
 .mt{
@@ -258,22 +269,87 @@ a:hover{
     padding-top:10px;
     font-family:'Times New Roman', Times, serif;
  }
- .pad{
-    padding-top: 100px;
-    padding-left:100px;
+ .every2{
+    color:white;
+    font-size:17px;
+    padding-top:10px;
+    font-family:'Times New Roman', Times, serif;
  }
-</style>
-<script>
-    /* Open when someone clicks on the span element */
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+ .pad{
+    padding-top: 80px;
+    padding-left:50px;
+ }
+ .pad1{
+    padding-top: 50px;
+    padding-left:50px;
+ }
+ .view{
+    width: 20%;
+    height:35px;
+    background-color: chocolate;
+    color: black;
+    padding-top: 3px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+ }
+
+ /* Base hidden state */
+.scroll-box {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+/* Start positions */
+.from-left {
+  transform: translateX(-100px);
 }
-</script>
+
+.from-right {
+  transform: translateX(100px);
+}
+
+/* When visible */
+.scroll-box.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Overlay content */
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+
+
+</style>
+
 <body>
 
 
@@ -285,24 +361,16 @@ function closeNav() {
 
 
 
-    <div class="container-fluid text-center">
-        <div class="row">
-            <div class="nav1 pt-2">
-               <a href="#">
-                <i class="fa fa-envelope red"></i> danielnnaji89@gmail.com
-               </a>
-               <a href="#">
-                <i class="fa fa-phone red ml-3"></i> +234-90-3256-2314 
-               </a>
-            </div>
-        </div>
-    </div>
     
         
    
         <div class="container-fluid">
             <div class="row">
-                <div class=" col-sm-12 col-md-12 col-lg-12 abs1"></div>
+                <div class=" col-sm-12 col-md-12 col-lg-12 abs1">
+                    <div class="slide active" style="background-image: url('images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png');"></div>
+                    <div class="slide" style="background-image: url('images/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.webp');"></div>
+                    <div class="slide" style="background-image: url('images/ad34ad8485eb2eb9fce806826b65375d.jpg');"></div>
+                </div>
                 <nav class="navbar navbar-expand-lg mb-3">
 
                      <!-- The overlay -->
@@ -313,11 +381,11 @@ function closeNav() {
 
                 <!-- Overlay content -->
                 <div class="overlay-content">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Rooms</a>
-                    <a href="#">Menu</a>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="room.html">Rooms</a>
+                    <a href="menu.html">Menu</a>
                 </div>
 
                 </div>
@@ -335,27 +403,28 @@ function closeNav() {
         <div class="collapse navbar-collapse navbar-dark" id="collapsibleNavbar">
                 <ul class="navbar-nav ml">
                 <li class="nav-item">
-                <a href="#" class="nav-link ml-2" style=color:black ><h5>Home</h5></a>
+                <a href="index.html" class="nav-link ml-2" style="color:black" ><h5>Home</h5></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ml-2" style=color:black href="#"><h5>About</h5></a>
+                <a href="about.html" class="nav-link ml-2" style="color:black" ><h5>About</h5></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ml-2" style=color:black href="#"><h5>Contact</h5></a>
+                <a href="contact.html" class="nav-link ml-2" style="color:black" ><h5>Contact</h5></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ml-2" style=color:black href="#"><h5>Rooms</h5></a>
+                <a href="room.html" class="nav-link ml-2" style="color:black" ><h5>Rooms</h5></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link ml-2" style=color:black href="#"><h5>Menu</h5></a>
+                <a href="menu.html" class="nav-link ml-2" style="color:black" ><h5>Menu</h5></a>
                 </li>
                 </ul>
         
         </div>
                        
         </nav>
-       
-                <div class="col-sm-12 col-md-12 col-lg-12 abs2 text-center justify-content-center mt-4">
+                 
+
+                <div class="col-sm-12 col-md-12 col-lg-12 abs2 text-center hero-content justify-content-center mt-4 scroll-box from-left">
                    
                     
                     
@@ -372,39 +441,57 @@ function closeNav() {
 
         <div class="container-fluid mt-3">
                 <div class="row">
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-left">
                         <div class="boxa ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/Siute_njjb9a.jpg" width="95%" height="300px" alt="">
                                 </div>
                             </a>
-                                 <div class="boxa2 mt-3"><b>Standard Room</b></div>
-                            <div class="boxa3 pt-2">#30,000</div>
+                                 <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                                 <div class="boxa2 mt-1"><b>Standard Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#30,000</div></a>
                         </div>
                     </div>
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 scroll-box from-left box mb-5">
                         <div class="boxb ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/bg2-92f20318.jpg" width="100%" height="300px" alt="">
                                 </div>
                             </a>
-                            <div class="boxa2 mt-3"><b>Executive Room</b></div>
-                            <div class="boxa3 pt-2">#40,000</div>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Executive Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#40,000</div></a>
                         </div>
                     </div>
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
                         <div class="boxc ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/ChatGPT Image Jan 10, 2026, 10_49_36 AM.png" width="100%" height="300px" alt="">
                                 </div>
                             </a>
-                            <div class="boxa2 mt-3"><b>Presidential Room</b></div>
-                            <div class="boxa3 pt-2">#50,000</div>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Presidential Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#50,000</div></a>
                         </div>
                     </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/luxury.jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>kingly Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#60,000</div></a>
+                        </div>
+                    </div>
+                </div>
+
                 </div>
         </div>
 
@@ -412,75 +499,120 @@ function closeNav() {
 
         <div class="container-fluid mt-3">
                 <div class="row">
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-left">
                         <div class="boxa ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/room (4).jpg" width="100%" height="300px" alt="">
                                 </div>
                             </a>
-                                 <div class="boxa2 mt-3"><b>Classic Room</b></div>
-                            <div class="boxa3 pt-2">#45,000</div>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                                 <div class="boxa2 mt-1"><b>Classic Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#45,000</div></a>
                         </div>
                     </div>
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 scroll-box from-left mb-5">
                         <div class="boxb ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/Executive_e5qlcu.jpg" width="100%" height="300px" alt="">
                                 </div>
                             </a>
-                            <div class="boxa2 mt-3"><b>Deluxe Room</b></div>
-                            <div class="boxa3 pt-2">#55,000</div>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>Deluxe Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#55,000</div></a>
                         </div>
                     </div>
-                    <div class=" col-sm-12 col-md-4 col-lg-4 box mb-5">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
                         <div class="boxc ml-5">
                             <a href="#">
                                 <div class="boxa1">
                                     <img src="images/luxury.jpg" width="100%" height="300px" alt="">
                                 </div>
                             </a>
-                            <div class="boxa2 mt-3"><b>kingly Room</b></div>
-                            <div class="boxa3 pt-2">#60,000</div>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>kingly Room</b></div>
+                            <a href="payment.html"><div class="boxa3 pt-2">BOOK FOR <br>#60,000</div></a>
+                        </div>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-6 col-lg-3 box mb-5 scroll-box from-right">
+                        <div class="boxc ml-5">
+                            <a href="#">
+                                <div class="boxa1">
+                                    <img src="images/luxury.jpg" width="100%" height="300px" alt="">
+                                </div>
+                            </a>
+                            <div class="add"><i class=" fa fa-expand ml-1"></i>  SIZE   <i class="fa fa-users ml-3 mr-1"></i>MAX PEOPLE 4</div>
+                            <div class="boxa2 mt-1"><b>kingly Room</b></div>
+                            <a href="payment.html"></a>
                         </div>
                     </div>
                 </div>
-        </div>
-         
-        <div class="container-fluid bg-dark one">
-            <div class="row">
-               
-                  <div class="col-sm-12 col-md-6 col-lg-6 pad">
-                    <span class="en">Enjoy Our Luxuries</span> <br>
-                    <p class="every">
-                        Everything to make your stay comfortable and memorable <br>
 
-                    ✓ 24/7 Internet Access <br>
-                    ✓ Premium Bedding & Linen <br>
-                    ✓ Tasteful delicacies <br>
-                    ✓ Room Service <br>
-                    ✓ In-Room Safe <br>
+
+                </div>
+        </div>
+
+        <div class="container-fluid one1">
+            <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-6 pl-5 scroll-box from-left">
+                     <div class="row">
+                        <img src="images/6c8d6bfb88f4d317d71519e7de5e1abf.jpg" class="mt ml-4" width="40%" height="400px" alt="">
+                        <img src="images/7dd866f939cd7b7ab37229c897bb949c.jpg" class="mt ml-2" width="40%" height="400px" alt="">
+                     </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-lg-6 pad1 scroll-box from-right">
+                    <span class="en">Restaurant</span> <br>
+                    <p class="every2">
+                        Enjoy beautifully crafted dishes in our elegant dining area, prepared with care by top chefs.
                     </p>
+                    <div class="view">
+                        <a href="menu.html"><b>View Menu</b></a>
+                    </div>
                   </div>
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                       <img src="images/luxury (1).jpg" class="mt" width="90%" height="400px" alt="">
-                  </div>
+                  
                
             </div>
         </div>
 
-
         <div class="container-fluid bg-light one">
             <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-6">
-                       <img src="images/laundry.jpeg" class="mt ml-2" width="90%" height="400px" alt="">
-                  </div>
 
-                  <div class="col-sm-12 col-md-6 col-lg-6 pad">
+                <div class="col-sm-12 col-md-6 col-lg-6 pad scroll-box from-left">
                     <span class="en">Laundry & Dry Cleaning Services</span> <br>
                     <p class="every1">
                         Enjoy a hassle-free stay with our premium laundry and dry cleaning services. Whether it’s a delicate outfit or everyday wear, our skilled team ensures each garment is meticulously cleaned, pressed, and returned fresh and ready to wear. We handle your clothing with care so you can focus on relaxing and enjoying your time with us.
+                    </p>
+                  </div>
+                  
+                  <div class="col-sm-12 col-md-6 col-lg-6 mt-5 pl-5 scroll-box from-right">
+                       <img src="images/4690e783b243d99e2c3bf85793a204a2.jpg" class="mt ml-2" width="90%" height="400px" alt="">
+                  </div>
+
+                  
+               
+            </div>
+        </div>
+
+         
+        <div class="container-fluid bg-dark one">
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6 col-lg-6 pl-5 scroll-box from-left">
+                       <img src="images/luxury (1).jpg" class="mt" width="90%" height="400px" alt="">
+                  </div>
+               
+                  <div class="col-sm-12 col-md-6 col-lg-6 pad scroll-box from-right">
+                    <span class="en">Enjoy Our Luxuries</span> <br>
+                    <p class="every">
+                        Everything to make your stay comfortable and memorable <br>
+
+                    ✓ Premium Bedding & Linen <br>
+                    ✓ Tasteful delicacies <br>
+                    ✓ Room Service <br>
+                    ✓ In-Room Safe <br>
                     </p>
                   </div>
                   
@@ -489,8 +621,66 @@ function closeNav() {
         </div>
 
 
+        
+
+
         <div class="footer">
             Copyright @ 2026 First-City Hotel, Home Of Luxury
         </div>
+
+        <script>
+
+    
+  const boxes = document.querySelectorAll('.scroll-box');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  boxes.forEach(box => observer.observe(box));
+
+
+
+    /* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Initial slide
+showSlide(currentSlide);
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+
+</script>
 </body>
 </html>
